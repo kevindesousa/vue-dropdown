@@ -2,6 +2,9 @@
 
 A Vue component that shows a dropdown.
 
+[![npm version](https://badge.fury.io/js/%40kevindesousa%2Fvue-dropdown.svg)](https://badge.fury.io/js/%40kevindesousa%2Fvue-dropdown)
+[![Maintainability](https://api.codeclimate.com/v1/badges/fe8c84874df324d0ac84/maintainability)](https://codeclimate.com/github/kevindesousa/vue-dropdown/maintainability)
+
 ## Installation
 
 ```js
