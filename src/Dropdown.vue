@@ -57,7 +57,7 @@ export default {
 
     .trigger {
         align-self: center;
-        padding: 12px 10px;
+        padding: 0;
         cursor: pointer;
     }
 
