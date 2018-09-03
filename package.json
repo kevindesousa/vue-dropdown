@@ -1,6 +1,6 @@
 {
   "name": "@kevindesousa/vue-dropdown",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "A Vue.js component that displays a dropdown",
   "main": "dist/vue-dropdown.js",
   "scripts": {

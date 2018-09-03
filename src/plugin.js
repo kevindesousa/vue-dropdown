@@ -1,7 +1,9 @@
-import Dropdown from './Dropdown.vue';
+import dropdown from './dropdown.vue';
+import dropdownOption from './dropdown-option.vue';
 
 module.exports = {
-  install: function (Vue, options) {
-    Vue.component('vue-dropdown', Dropdown);
+  install: function (Vue) {
+    Vue.component('k-dropdown', dropdown);
+    Vue.component('k-dropdown-option', dropdownOption);
   }
 };

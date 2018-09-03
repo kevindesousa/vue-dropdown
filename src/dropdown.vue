@@ -1,11 +1,5 @@
 <template>
     <div class="group-actions" :class="{'group-actions-embedded': embedded}" v-click-outside="close">
-        <div class="embedded" v-if="embedded">
-            <button v-for="action in embedded" :key="action.action"  @click="emitAction(action.action)">
-                <font-awesome-icon v-if="action.icon" :icon="action.icon"></font-awesome-icon>
-                <span v-if="action.title">{{ action.title }}</span>
-            </button>
-        </div>
         <div class="trigger" @click="open = !open">
             <font-awesome-icon :icon="icon"></font-awesome-icon>
         </div>
@@ -13,9 +7,7 @@
         <transition name="bounce">
             <div v-if="open" class="group-actions-menu box">
             <ul>
-                <li v-for="action in actions" :key="action.action" @click="emitAction(action.action)">
-                    <span>{{ action.title }}</span>
-                </li>
+                <slot></slot>
             </ul>
             </div>
         </transition>
@@ -26,21 +18,13 @@
 
 export default {
   name: 'dropdown',
-  props: ['actions', 'embedded'],
   data () {
     return {
       open: false,
       icon: 'ellipsis-v'
     }
   },
-
   methods: {
-    emitAction (action) {
-      this.close()
-
-      this.$emit('action', action)
-    },
-
     close () {
       this.open = false
     }
